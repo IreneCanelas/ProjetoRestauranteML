@@ -17,7 +17,7 @@ Este projeto visa a aplicar conhecimentos na área do Machine Learning através 
 ## Ficheiros necessários
 
 
-# Fontes
+## Fontes
 Abaixo estão listados alguns tutorias utilizados para criar este código:
 
 [Machine Learning e Tensorflow](https://colab.research.google.com/drive/1F_EWVKa8rbMXi3_fG0w7AtcscFq7Hi7B#forceEdit=true&sandboxMode=true)
