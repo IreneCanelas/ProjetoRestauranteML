@@ -5,7 +5,7 @@ Este projeto visa a aplicar conhecimentos na área do Machine Learning através 
 
 
 ## Pré-requisitos:
-- Pyhton
+- [Python](https://www.python.org/downloads/)
 
 - Editor de código fonte. 
 Sugestão:
