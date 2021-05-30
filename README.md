@@ -3,6 +3,7 @@
 ## Introdução:
 Este projeto visa a aplicar conhecimentos na área do Machine Learning através da criação e configuração de um modelo de previsão em Python e Tensorflow com o objetivo de prever o número de refeições servidas de um determinado restaurante 1 dia no futuro, utilizando para isso dados diários relativos à precipitação, temperatura e de refeições servidas no passado.
 
+<br />
 
 ## Pré-requisitos:
 - [Python](https://www.python.org/downloads/).
@@ -22,6 +23,7 @@ Sugestão:
 Sugestão:
 [SQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
+<br />
 
 ## Ficheiros necessários:
 
@@ -44,6 +46,7 @@ A tabela **dataset** é constituída por quatro colunas: *dia, refeições, temp
 
 A tabela **previsao** é constituída por 2 colunas: *data* e *valor* que representam o valor da previsão futura de refeições servidas no restaurante - esta tabela é criada sem qualquer dados iniciais visto que estes serão adicionados à medida que o modelo é executado.
 
+<br />
 
 ### - Configurar_Modelo.py
 
@@ -53,6 +56,7 @@ O tipo de modelo escolhido para este caso de estudo foi o GRU e os dados utiliza
 
 O propósito deste ficheiro é de permitir a configuração do modelo sempre que se necessitar - como é fornecido o ficheiro Modelo.keras não é obrigatória a execução deste script para o funcionamento deste projeto.
 
+<br />
 
 ### - Modelo.keras
 
@@ -60,6 +64,7 @@ Ficheiro em formato keras que representa o modelo de machine learning já previa
 
 É a partir deste modelo que são calculadas as previsões futuras.
 
+<br />
 
 ### - Previsao.py
 
@@ -79,6 +84,8 @@ newmodel = load_model('/app/Modelo.keras', custom_objects={'loss_mse_warmup': lo
 predict = newmodel.predict(x)
 ```
 
+<br />
+
 ## Regras:
 - Instalar todos os pré-requisitos;   
 - Fazer o download do projeto no formato .zip;
@@ -86,6 +93,7 @@ predict = newmodel.predict(x)
 - Abrir e executar ficheiro "Estrutura_SQL" no Sistema de Gestão de Base de Dados;
 - Executar script python "Previsao" para obter uma previsão 1 dia no futuro.
 
+<br />
 
 ## Fontes:
 Abaixo estão listados alguns tutorias utilizados para criar este código:
@@ -98,6 +106,7 @@ Abaixo estão listados alguns tutorias utilizados para criar este código:
 
 [Previsões futuras](https://github.com/rahulbhadani/medium.com/blob/master/01_12_2021/Saving_Model_TF2.ipynb)
 
+<br />
 
 ## Autoria
 - Irene Canelas : [@IreneCanelas](https://www.github.com/IreneCanelas)
