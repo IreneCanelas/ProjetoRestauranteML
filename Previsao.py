@@ -9,13 +9,13 @@ import pandas as pd
 from datetime import timedelta
 
 db = mysql.connect(
-    host = "eu-cdbr-west-01.cleardb.com",
-    user = "b167f6c58e4739",
-    passwd = "fb77ce6d",
-    database = "heroku_bda78cf4f94e7ed"
+    host = "localhost",
+    user = "root",
+    passwd = "",
+    database = "restaurantedb"
 )
 
-df = pd.read_sql_query('''select dia, refeições, tempo, chuva from dataset2017_2020''', db)
+df = pd.read_sql_query('''select dia, refeições, tempo, chuva from dataset''', db)
 
 df = df.iloc[1:]
 
@@ -47,7 +47,8 @@ def loss_mse_warmup(y_true, y_pred):
     mse = mean(square(y_true_slice - y_pred_slice))
     return mse
 
-newmodel = load_model('/app/checkpoint.keras', custom_objects={'loss_mse_warmup': loss_mse_warmup})
+# Substituir '/app/Modelo.keras' pelo caminho onde se encontra guardado o Modelo
+newmodel = load_model('/app/Modelo.keras', custom_objects={'loss_mse_warmup': loss_mse_warmup})
 predict = newmodel.predict(x)
 
 inverse = yscaler.inverse_transform(predict[0]) 

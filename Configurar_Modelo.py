@@ -125,7 +125,7 @@ model.summary()
 
 
 ''' funções de callback '''
-path_checkpoint = 'checkpoint.keras'
+path_checkpoint = 'Modelo.keras'
 
 callback_checkpoint = ModelCheckpoint(filepath=path_checkpoint, monitor='val_loss', verbose=1,
                                       save_weights_only=False)
