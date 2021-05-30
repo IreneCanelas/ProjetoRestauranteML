@@ -72,7 +72,7 @@ df = pd.read_sql_query('''select dia, refeições, tempo, chuva from dataset''',
 x_50 = df.iloc[-50:]
 ```
 
-**Regra**: para calcular uma previsão no futuro utilizando um modelo de machine learning previamente treinado/testado como é visto neste projeto, é necessário 'alimenta-lo' com vários valores. Assim, e aplicando a lógica deste caso de estudo, se foi inserido na tabela **dataset** o número de refeições, a temperatura e chuva do dia 30-11-2020, é necessário também incluir as 49 linhas anteriores a essa data da tabela para ser possível calcular a previsão a partir da função predict(x) utilizada no código (não é preciso ser necessariamente os 50 últimos valores, pode ser um número à escolha). O resultado que guardado na variável predict, e fazendo jus ao exemplo anterior, representa o valor previsto de refeições que serão servidas pelo restaurante no dia 01-12-2020.
+**Regra**: para calcular uma previsão no futuro utilizando um modelo de machine learning previamente treinado/testado como é visto neste projeto, é necessário 'alimenta-lo' com vários valores. Assim, e aplicando a lógica deste caso de estudo, se foi inserido na tabela **dataset** o número de refeições, a temperatura e chuva do dia 30-11-2020, é necessário também incluir as 49 linhas anteriores a essa data da tabela para ser possível calcular a previsão a partir da função predict(x) utilizada no código (não é preciso ser necessariamente os 50 últimos valores, pode ser um número à escolha). Por fim, o resultado guardado na variável predict, e fazendo jus ao exemplo anterior, representa o valor previsto de refeições que serão servidas pelo restaurante no dia 01-12-2020.
 
 ```python
 newmodel = load_model('/app/Modelo.keras', custom_objects={'loss_mse_warmup': loss_mse_warmup})
